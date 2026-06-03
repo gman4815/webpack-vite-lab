@@ -9,13 +9,13 @@ jobs:
   steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
-    with:
-      node-version: '18'
+      with:
+        node-version: '18'
     - name: Сборка Webpack
-    run: |
-      cd webpack-project
-      npm ci
-      npm run build
+      run: |
+        cd webpack-project
+        npm ci
+        npm run build
     - name: Сохранение артефактов
       uses: actions/upload-artifact@v3
       with:
